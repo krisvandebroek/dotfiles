@@ -1,0 +1,76 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+brew bundle --no-lock --file=/dev/stdin << Brewfile
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+# Quick New Machine Set up
+brew "chezmoi"
+brew "mas"
+
+# Basics
+brew "git"
+brew "git-flow"
+brew "gh"
+brew "putty"
+brew "rsync"
+cask "rar"
+brew "wget"
+brew "yt-dlp"
+brew "tmux"
+
+# Media Tools
+brew "exiftool"
+brew "fdupes"
+brew "ffmpeg"
+brew "gd"
+brew "jhead"
+brew "media-info"
+brew "mplayer"
+
+# ZSH & Terminal
+brew "pure"
+cask "iterm2"
+cask "hyper"
+
+# Mac Apps
+cask "sublime-text"
+cask "google-chrome"
+cask "1Password"
+cask "spotify"
+cask "notion"
+cask "discord"
+cask "evernote"
+cask "firefox"
+cask "gimp"
+cask "google-drive"
+cask "macdown"
+cask "microsoft-teams"
+cask "rectangle"
+cask "sourcetree"
+cask "steam"
+cask "stellarium"
+cask "transmission"
+cask "visual-paradigm"
+cask "vlc"
+cask "whatsapp"
+cask "zoom"
+cask "slack"
+mas "Caffeinated", id: 1362171212
+mas "Mini Calendar", id: 1088779979
+mas "Microsoft To Do", id: 1274495053
+mas "PhotoScape X", id: 929507092
+mas "Keynote", id: 409183694
+mas "iMovie", id: 408981434
+mas "Trello", id: 1278508951
+mas "Kindle", id: 405399194
+mas "Microsoft Outlook", id: 985367838
+mas "Pages", id: 409201541
+mas "Numbers", id: 409203825
+mas "Pocket", id: 568494494
+
+
+Brewfile
+{{ end -}}
