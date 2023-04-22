@@ -1,4 +1,5 @@
 packadd! dracula
 syntax enable
 colorscheme dracula
+" No background color for dracula in Vim to match with the background of Pure in Hyper terminal
 highlight Normal ctermbg=NONE
