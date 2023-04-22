@@ -6,12 +6,13 @@
 defaults write com.apple.dock "orientation" -string "bottom"
 defaults write com.apple.dock "tilesize" -int "36"
 defaults write com.apple.dock "autohide" -bool "true"
-defaults write com.apple.dock "autohide-time-modifier" -float "0.5"
+defaults write com.apple.dock "autohide-time-modifier" -float "0"
+defaults write com.apple.dock "autohide-delay" -float "0"
 defaults write com.apple.dock "show-recents" -bool "false"
-killall dock
+killall Dock || true
 
 defaults write com.apple.screencapture "location" -string "~/Downloads/Screenshots"
-killall SystemUIServer
+killall SystemUIServer || true
 
 defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "false"
 defaults write com.apple.finder "AppleShowAllFiles" -bool "false"
@@ -25,11 +26,11 @@ defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "false"
 defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "false"
 defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "false"
 defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "false"
-killall Finder
+killall Finder || true
 
 defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "true" 
 
 defaults write com.apple.ActivityMonitor "IconType" -int "5"
-killall Activity\ Monitor
+killall Activity\ Monitor || true
 
 {{ end -}}
