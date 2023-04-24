@@ -3,12 +3,35 @@
 
 # https://macos-defaults.com/
 
+# Hot corners
+# Possible values:
+# 0: no-op
+# 2: Mission Control
+# 3: Show application windows
+# 4: Desktop
+# 5: Start screen saver
+# 6: Disable screen saver
+# 7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+defaults write com.apple.dock wvous-tl-corner -int 4
+defaults write com.apple.dock wvous-tl-modifier -int 0
+defaults write com.apple.dock wvous-tr-corner -int 2
+defaults write com.apple.dock wvous-tr-modifier -int 0
+defaults write com.apple.dock wvous-bl-corner -int 10
+defaults write com.apple.dock wvous-bl-modifier -int 0
+defaults write com.apple.dock wvous-br-corner -int 12
+defaults write com.apple.dock wvous-br-modifier -int 0
+
 defaults write com.apple.dock "orientation" -string "bottom"
-defaults write com.apple.dock "tilesize" -int "36"
-defaults write com.apple.dock "autohide" -bool "true"
+defaults write com.apple.dock "tilesize" -int "40"
+defaults write com.apple.dock "autohide" -bool "false"
 defaults write com.apple.dock "autohide-time-modifier" -float "0"
 defaults write com.apple.dock "autohide-delay" -float "0"
 defaults write com.apple.dock "show-recents" -bool "false"
+defaults write com.apple.dock "minimize-to-application" -bool true
+
 killall Dock || true
 
 defaults write com.apple.screencapture "location" -string "~/Downloads/Screenshots"
@@ -16,8 +39,9 @@ killall SystemUIServer || true
 
 defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "false"
 defaults write com.apple.finder "AppleShowAllFiles" -bool "false"
+defaults write com.apple.finder "ShowStatusBar" -bool true
 defaults write com.apple.finder "ShowPathbar" -bool "true"
-defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv"
+defaults write com.apple.finder "FXPreferredViewStyle" -string "nlsv"
 defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
 defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf"
 defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "1"
@@ -28,9 +52,32 @@ defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "false"
 defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "false"
 killall Finder || true
 
+# Show the ~/Library folder
+chflags nohidden ~/Library
+# Show the /Volumes folder
+sudo chflags nohidden /Volumes
+
 defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "true" 
 
 defaults write com.apple.ActivityMonitor "IconType" -int "5"
-killall Activity\ Monitor || true
+if pgrep "Activity Monitor"; then
+
+  killall "Activity Monitor";
+fi 
+
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+
+# Transmission
+defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+defaults write org.m0k.transmission WarningDonate -bool false
+defaults write org.m0k.transmission WarningLegal -bool false
+defaults write org.m0k.transmission RandomPort -bool true
 
 {{ end -}}
