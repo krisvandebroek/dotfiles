@@ -1,0 +1,15 @@
+[
+	{
+  "keys": ["f1"],
+  "command": "dired",
+  "args": { "immediate": true }
+	},
+  {
+    // CMD + SHIFT + W to toggle word wrap
+    "keys": ["super+shift+w"],
+    "command": "toggle_setting",
+    "args": {
+        "setting": "word_wrap"
+    }
+  }
+]
