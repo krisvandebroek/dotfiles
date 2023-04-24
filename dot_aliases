@@ -1,3 +1,4 @@
+
 alias t5t="pwd"
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias cd..="cd .." # Typical typo
