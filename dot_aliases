@@ -1,3 +1,4 @@
+alias test="echo 'foobar'"
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias cd..="cd .." # Typical typo
 alias ..="cd .."
