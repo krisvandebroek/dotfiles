@@ -1,4 +1,4 @@
-alias test="echo 'foobar'"
+alias test="pwd"
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias cd..="cd .." # Typical typo
 alias ..="cd .."
