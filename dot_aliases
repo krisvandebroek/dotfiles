@@ -1,7 +1,7 @@
 # Chezmoi aliases
-alias dots = "chezmoi status"
-alias dota = "chezmoi apply"
-alias dote = "chezmoi edit"
+alias dots="chezmoi status"
+alias dota="chezmoi apply"
+alias dote="chezmoi edit"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias cd..="cd .." # Typical typo
