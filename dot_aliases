@@ -3,6 +3,8 @@ alias dots="chezmoi status"
 alias dota="chezmoi apply"
 alias dote="chezmoi edit"
 
+alias subs="OpenSubtitlesDownload.py -l dut -l eng"
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias cd..="cd .." # Typical typo
 alias ..="cd .."
