@@ -1,6 +1,6 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
-
+ 
 brew bundle --no-lock --file=/dev/stdin << Brewfile
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -23,6 +23,7 @@ brew "tmux"
 brew "ack"
 brew "tree"
 brew "node"
+brew "openjdk"
 
 # Media Tools
 brew "exiftool"
