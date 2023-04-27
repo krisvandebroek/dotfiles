@@ -2,6 +2,7 @@
 alias dots="chezmoi status"
 alias dota="chezmoi apply"
 alias dote="chezmoi edit"
+alias dott="subl ~/.local/share/chezmoi"
 
 alias subs="OpenSubtitlesDownload.py -l dut -l eng"
 
