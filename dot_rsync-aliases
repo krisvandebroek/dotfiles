@@ -1,0 +1,9 @@
+function rsync-help() {
+        echo "Rsync Custom Aliases Usage"
+        echo
+        echo "  rsync-archive = Recursive / Preserve timestamps / Verbose / Global Progress"
+        echo "        Usage: rsync-arhive --log-file=mylogfile.log [source] [destionation]"
+        echo "               The source or destination can be remote."
+}
+
+alias rsync-archive="rsync --archive --no-o --no-g --no-p --one-file-system --itemize-changes --verbose --human-readable --progress --info=progress2 --stats"

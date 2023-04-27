@@ -86,6 +86,7 @@ autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 source ~/.aliases
 source ~/.functions
+source ~/.rsync-aliases
 
 #### Switch to Pure as prompt
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
