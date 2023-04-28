@@ -6,6 +6,7 @@ alias dott="subl ~/.local/share/chezmoi"
 
 alias subs="OpenSubtitlesDownload.py -l dut -l eng"
 alias ag="alias | grep"
+alias hg="history | grep"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias cd..="cd .." # Typical typo
