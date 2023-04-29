@@ -1,7 +1,7 @@
 (function(){
 
 // ==UserScript==
-// @name           Trello Markdown Cards2
+// @name           Trello Markdown Cards3
 // @author         krisvandebroek
 // @version        1.0.0
 // @namespace      https://vandebroek.net
