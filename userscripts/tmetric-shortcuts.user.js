@@ -13,6 +13,7 @@
 // ==/UserScript==
 
 /*
+
 HOW TO USE
 
 = Add / Edit entry =
