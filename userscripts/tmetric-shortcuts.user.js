@@ -5,8 +5,8 @@
 // @homepage     https://github.com/krisvandebroek/dotfiles/
 // @description  Easy Shortcuts for TMetric
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tmetric.com
-// @updateUrl    https://github.com/krisvandebroek/dotfiles/raw/main/userscripts/tmetric-shortcuts.user.js
-// @downloadUrl  https://github.com/krisvandebroek/dotfiles/raw/main/userscripts/tmetric-shortcuts.user.js
+// @updateURL    https://github.com/krisvandebroek/dotfiles/raw/main/userscripts/tmetric-shortcuts.user.js
+// @downloadURL  https://github.com/krisvandebroek/dotfiles/raw/main/userscripts/tmetric-shortcuts.user.js
 // @author       Kris Vandebroek
 // @match        https://app.tmetric.com/
 // @grant        none
