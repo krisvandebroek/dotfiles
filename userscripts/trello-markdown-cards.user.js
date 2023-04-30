@@ -1,20 +1,12 @@
-(function(){
-
 // ==UserScript==
-// @name           Trello Markdown Cards3
-// @author         krisvandebroek
-// @version        1.0.0
-// @namespace      https://vandebroek.net
-// @description    Allows to use bold, italic, strikethrough and code in the titles of Trello Cards
-// @lastchanges    first version
-// @updatetype     24
-// @grant          GM_getValue
-// @grant          GM_setValue
-// @grant          GM_deleteValue
-// @grant          GM_xmlhttpRequest
-// @grant          GM_registerMenuCommand
-// @grant          GM_openInTab
-// @include        https://trello.com/b/*
+// @name          Trello Markdown Cards
+// @version       1.0.0
+// @homepage      https://gist.github.com/gorbiz/6062481
+// @description   Add support for bold and emphasized Markdown in card titles
+// @match         https://trello.com/b/*
+// @match         http://trello.com/b/*
+// @updateUrl     https://github.com/krisvandebroek/dotfiles/raw/main/userscripts/trello-markdown-cards.user.js
+// @downloadUrl   https://github.com/krisvandebroek/dotfiles/raw/main/userscripts/trello-markdown-cards.user.js
 // ==/UserScript==
 
 function markdownAll() {
@@ -30,5 +22,3 @@ function markdownAll() {
 }
 
 markdownAll();
-
-})();
