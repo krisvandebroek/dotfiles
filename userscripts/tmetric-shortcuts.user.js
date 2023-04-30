@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TMetric Shortcuts
-// @version      1.0.0
+// @version      1.0.1
 // @namespace    https://github.com/krisvandebroek
 // @homepage     https://github.com/krisvandebroek/dotfiles/
 // @description  Easy Shortcuts for TMetric
@@ -15,6 +15,7 @@
 /*
 
 HOW TO USE
+----------
 
 = Add / Edit entry =
 Press N to add a new Entry
