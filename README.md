@@ -23,3 +23,12 @@ Using Chezmoi, the following is automated:
 - Installation of my favourite command-line [**aliases**](home/dot_aliases) and [**functions**](home/dot_functions).
 - I've configured SublimeText with the FileBrowser plugin which is activated by pressing `f1`.
 - I've added 3 Automator workflows. They can be used to convert iPhone photos in HEIC format to JPG, MOV movies to MP4 and that can downscale images.
+
+# Manual Actions
+
+Open the following URLs in Chrome to add the Tampermonkey Scripts
+- [trello-reduce-zoom.user.js](https://github.com/krisvandebroek/dotfiles/raw/main/userscripts/trello-reduce-zoom.user.js)
+- [trello-markdown-cards.user.js](https://github.com/krisvandebroek/dotfiles/raw/main/userscripts/trello-markdown-cards.user.js)
+- [tmetric-shortcuts.user.js](https://github.com/krisvandebroek/dotfiles/raw/main/userscripts/tmetric-shortcuts.user.js)
+
+[Reference](https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide) for creating User Scripts.
