@@ -1,5 +1,27 @@
+" --------------------------
+" Activate the Dracula theme
+" --------------------------
 packadd! dracula
 syntax enable
 colorscheme dracula
 " No background color for dracula in Vim to match with the background of Pure in Hyper terminal
 highlight Normal ctermbg=NONE
+
+" -----------------------
+" Behaviour Configuration
+" -----------------------
+
+set nu " number lines
+set incsearch " incremental search (as string is being typed)
+set hls " highlight search
+set ruler " show current position in file
+set scrolloff=5 " show lines above and below cursor (when possible)
+set laststatus=2
+set tabstop=4 " Show tabs as 4 spaces
+" smart case-sensitive search
+set ignorecase
+set smartcase
+set mouse+=a " enable mouse mode (scrolling, selection, etc)
+" open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
