@@ -1,5 +1,6 @@
 [core]
 	excludesfile = /Users/krisvandebroek/.gitignore_global
+	editor = subl -n -W
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
