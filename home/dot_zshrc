@@ -118,3 +118,6 @@ prompt pure
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Configuration for the 'op' (1Password CLI) to activate when using gh (GitHub CLI)
+source /Users/krisvandebroek/.config/op/plugins.sh
