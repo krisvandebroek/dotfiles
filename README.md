@@ -33,3 +33,4 @@ Open the following URLs in Chrome to add the Tampermonkey Scripts
 
 [Reference](https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide) for creating User Scripts.
 
+
