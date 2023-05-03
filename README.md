@@ -32,3 +32,4 @@ Open the following URLs in Chrome to add the Tampermonkey Scripts
 - [tmetric-shortcuts.user.js](https://github.com/krisvandebroek/dotfiles/raw/main/userscripts/tmetric-shortcuts.user.js)
 
 [Reference](https://simply-how.com/enhance-and-fine-tune-any-web-page-the-complete-user-scripts-guide) for creating User Scripts.
+
