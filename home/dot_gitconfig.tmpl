@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/krisvandebroek/.gitignore_global
+	excludesfile = {{ .chezmoi.homeDir -}}.gitignore_global
 	editor = subl -n -W
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -8,8 +8,15 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	name = Kris Vandebroek
-	email = kris@vandebroek.net
+	name = {{ .name }}
+	email = {{ .email }}
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICvvv+0ARP7g5+gKbVtjDo6UzUlPFEDSxoacpyIm+UkY
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[commit]
+  gpgsign = true
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
