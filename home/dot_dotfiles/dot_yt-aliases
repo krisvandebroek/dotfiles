@@ -1,0 +1,9 @@
+alias yt='~/.dotfiles/yt-aliases.sh'
+
+function yt-1() {
+	yt-dlp -S "res:720" -o "%(uploader)s/%(upload_date)s-%(title)s.%(ext)s" "$@"
+}
+
+function yt-2() {
+	yt-dlp -S "res:720" -o "DeadPine/DeadPine-%(playlist_index)03d.%(ext)s" "$@"
+}

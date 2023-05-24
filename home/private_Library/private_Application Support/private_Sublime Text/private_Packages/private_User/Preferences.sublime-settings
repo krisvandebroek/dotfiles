@@ -1,5 +1,5 @@
 {
-	"font_size": 20,
+	"font_size": 19,
 	"ignored_packages":
 	[
 		"Vintage",
@@ -7,4 +7,5 @@
 	"theme": "Default.sublime-theme",
 	"tab_size": 2,
 	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
+	"show_project_first": true,
 }

@@ -1,6 +1,8 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
 {{- $name := promptStringOnce . "name" "Name" -}}
+{{- $machineName := promptStringOnce . "machineName" "Machine name (MacBook M2 Pro 32GB 16inch 2023)" -}}
 
 [data]
     email = {{ $email | quote }}
     name = {{ $name | quote }}
+	machineName = {{ $machineName | quote }}

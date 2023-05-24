@@ -84,9 +84,10 @@ plugins=(
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
-source ~/.aliases
-source ~/.functions
-source ~/.rsync-aliases
+source ~/.dotfiles/.aliases
+source ~/.dotfiles/.functions
+source ~/.dotfiles/.rsync-aliases
+source ~/.dotfiles/.yt-aliases
 
 #### Switch to Pure as prompt
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
@@ -122,3 +123,11 @@ prompt pure
 
 # Configuration for the 'op' (1Password CLI) to activate when using gh (GitHub CLI)
 source {{ .chezmoi.homeDir -}}/.config/op/plugins.sh
+
+# Source any private zshrc configuration
+if [ -f ~/.zshrc-private ]
+then
+    source ~/.zshrc-private
+else
+fi
+

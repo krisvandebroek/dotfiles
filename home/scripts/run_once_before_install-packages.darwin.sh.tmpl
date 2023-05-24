@@ -1,10 +1,12 @@
 {{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
+
  
 brew bundle --no-lock --file=/dev/stdin << Brewfile
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "homebrew/cask-versions"
 
 # Quick New Machine Set up
 brew "chezmoi"
@@ -77,6 +79,8 @@ cask "syncalicious"
 cask "qlmarkdown"
 cask "alt-tab"
 cask "miro"
+cask "prismlauncher"
+cask "temurin17"
 mas "Caffeinated", id: 1362171212
 mas "Mini Calendar", id: 1088779979
 mas "Microsoft To Do", id: 1274495053
@@ -91,4 +95,5 @@ mas "Pocket", id: 568494494
 mas "Snap", id: 418073146
 
 Brewfile
+
 {{ end -}}
