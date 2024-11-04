@@ -31,6 +31,7 @@ defaults write com.apple.dock "autohide-time-modifier" -float "0"
 defaults write com.apple.dock "autohide-delay" -float "0"
 defaults write com.apple.dock "show-recents" -bool "false"
 defaults write com.apple.dock "minimize-to-application" -bool false
+defaults write com.apple.dock "mru-spaces" -bool "false"
 
 killall Dock || true
 
@@ -45,6 +46,7 @@ defaults write com.apple.finder "FXPreferredViewStyle" -string "nlsv"
 defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
 defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf"
 defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "1"
+defaults write NSGlobalDomain "NSStatusItemSpacing" -int "6"
 defaults write com.apple.finder "CreateDesktop" -bool "false"
 defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "false"
 defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "false"

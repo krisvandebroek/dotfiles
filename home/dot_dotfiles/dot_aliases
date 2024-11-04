@@ -2,7 +2,7 @@
 alias dots="chezmoi status"
 alias dota="chezmoi apply"
 alias dote="chezmoi edit"
-alias dott="subl ~/.local/share/chezmoi"
+alias dott="subl ~/.local/share/chezmoi ~/.local/share/chezmoi-private ~/Downloads/Purgeable/dotfiles-private"
 alias dot="cd ~/.local/share/chezmoi; ls"
 alias dotp="cd ~/.local/share/chezmoi-private; ls"
 
