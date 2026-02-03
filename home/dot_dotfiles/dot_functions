@@ -78,3 +78,43 @@ function gen-file-list() {
 		find . -type f -print0 | xargs -0 stat -f '%N %z' | sort > $1;
 	fi
 }
+
+# Run a git command in every git repo under the current directory
+grall() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: grall <git subcommand and args>"
+    echo "Example: grall status -s"
+    return 1
+  fi
+
+  # Build the command to run (everything the user passed)
+  local cmd=(git "$@")
+
+  # Find git repos (change -maxdepth to control scope)
+  # -maxdepth 2: current dir and immediate children; set to 99 for deep search
+  local repos
+  IFS=$'\n' repos=($(find . -maxdepth 2 -type d -name .git 2>/dev/null))
+
+  if [ ${#repos[@]} -eq 0 ]; then
+    echo "No git repositories found under $(pwd)"
+    return 0
+  fi
+
+  for gitdir in "${repos[@]}"; do
+    local repo="${gitdir%/.git}"
+    echo ""
+    echo "==== ${repo} ===="
+    if [ -d "$repo" ]; then
+      (
+        cd "$repo" || { echo "Failed to cd into $repo"; exit 1; }
+        # Show the command being run
+        echo "+ ${cmd[@]}"
+        # Execute the git command
+        "${cmd[@]}"
+      )
+    else
+      echo "Skipping: $repo not a directory"
+    fi
+  done
+}
+
